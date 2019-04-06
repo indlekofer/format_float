@@ -13,11 +13,11 @@ console.log(formatFloat("23.456.78", 2, ",", "."); // => 23456.78
 ## Params
   string floatFormat(float|string number, int decimals = 2, string decPoint = ",", string thousandsSep = ".", round = true)
 
-  **number**: *string* input number              
-  **decimals**: *number* decimals amount
-  **decPoint**: *string* decimal point
-  **thousandsSep**: *string* thousands separator
-  **round**: *bool* do round ?(default: true)
+  **number**: *string* input number  
+  **decimals**: *number* decimals amount  
+  **decPoint**: *string* decimal point  
+  **thousandsSep**: *string* thousands separator  
+  **round**: *bool* do round ?(default: true)  
 
 ## Return
 
