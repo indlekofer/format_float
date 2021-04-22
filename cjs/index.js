@@ -20,14 +20,14 @@ var _default = function _default(value) {
   var thousandsStep = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '.';
   var round = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : true;
 
-  if (typeof value === 'string' && value.replace) {
-    if (value.trim) value = value.trim(); //remove thousands step
+  if (typeof value == 'string') {
+    value.trim(); //remove thousands step
 
     if (thousandsStep !== null && thousandsStep !== '') {
       value = value.replace(new RegExp(escapeRegExp(thousandsStep), 'g'), '');
     }
 
-    if (decPoint != null) {
+    if (decPoint != null && decPoint !== '' && decPoint != '.') {
       value = value.replace(decPoint, '.');
     }
 

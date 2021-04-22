@@ -6,13 +6,13 @@ const escapeRegExp = (str) => {
 };
 
 export default (value, precision = null, decPoint = ',', thousandsStep = '.', round = true) => {
-  if (typeof value === 'string' && value.replace) {
-    if (value.trim) value = value.trim();
+  if (typeof value == 'string') {
+    value.trim();
     //remove thousands step
     if (thousandsStep !== null && thousandsStep !== '') {
       value = value.replace(new RegExp(escapeRegExp(thousandsStep), 'g'), '');
     }
-    if (decPoint != null) {
+    if (decPoint != null && decPoint !== '' && decPoint != '.') {
       value = value.replace(decPoint, '.');
     }
     if (!isNumeric(value)) return null;
